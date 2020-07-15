@@ -2333,6 +2333,9 @@ class TranslationUnit(ClangObject):
     # into the set of code completions returned from this translation unit.
     PARSE_INCLUDE_BRIEF_COMMENTS_IN_CODE_COMPLETION = 128
 
+    # Do not stop processing when fatal errors are encountered.
+    PARSE_KEEPGOING = 512
+
     @classmethod
     def from_source(cls, filename, args=None, unsaved_files=None, options=0,
                     index=None):

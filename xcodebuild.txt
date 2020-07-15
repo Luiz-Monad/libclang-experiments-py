@@ -1,0 +1,97 @@
+
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang \
+  -x objective-c \
+  -target x86_64-apple-ios12.4-simulator \
+  -fmessage-length=0 \
+  -fdiagnostics-show-note-include-stack \
+  -fmacro-backtrace-limit=0 \
+  -std=gnu11 \
+  -fobjc-arc \
+  -fobjc-weak \
+  -fmodules \
+  -gmodules \
+  -fmodules-cache-path=/Users/ohanar/Library/Developer/Xcode/DerivedData/ModuleCache.noindex \
+  -fmodules-prune-interval=86400 \
+  -fmodules-prune-after=345600 \
+  -fbuild-session-file=/Users/ohanar/Library/Developer/Xcode/DerivedData/ModuleCache.noindex/Session.modulevalidation \
+  -fmodules-validate-once-per-build-session \
+  -Wnon-modular-include-in-framework-module \
+  -Werror=non-modular-include-in-framework-module \
+  -Wno-trigraphs \
+  -fpascal-strings \
+  -O0 \
+  -fno-common \
+  -Wno-missing-field-initializers \
+  -Wno-missing-prototypes \
+  -Werror=return-type \
+  -Wdocumentation \
+  -Wunreachable-code \
+  -Wno-implicit-atomic-properties \
+  -Werror=deprecated-objc-isa-usage \
+  -Wno-objc-interface-ivars \
+  -Werror=objc-root-class \
+  -Wno-arc-repeated-use-of-weak \
+  -Wimplicit-retain-self \
+  -Wduplicate-method-match \
+  -Wno-missing-braces \
+  -Wparentheses \
+  -Wswitch \
+  -Wunused-function \
+  -Wno-unused-label \
+  -Wno-unused-parameter \
+  -Wunused-variable \
+  -Wunused-value \
+  -Wempty-body \
+  -Wuninitialized \
+  -Wconditional-uninitialized \
+  -Wno-unknown-pragmas \
+  -Wno-shadow \
+  -Wno-four-char-constants \
+  -Wno-conversion \
+  -Wconstant-conversion \
+  -Wint-conversion \
+  -Wbool-conversion \
+  -Wenum-conversion \
+  -Wno-float-conversion \
+  -Wnon-literal-null-conversion \
+  -Wobjc-literal-conversion \
+  -Wshorten-64-to-32 \
+  -Wpointer-sign \
+  -Wno-newline-eof \
+  -Wno-selector \
+  -Wno-strict-selector-match \
+  -Wundeclared-selector \
+  -Wdeprecated-implementations \
+  -DDEBUG=1 \
+  -DOBJC_OLD_DISPATCH_PROTOTYPES=0 \
+  -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.5.sdk \
+  -fasm-blocks \
+  -fstrict-aliasing \
+  -Wprotocol \
+  -Wdeprecated-declarations \
+  -g \
+  -Wno-sign-conversion \
+  -Winfinite-recursion \
+  -Wcomma \
+  -Wblock-capture-autoreleasing \
+  -Wstrict-prototypes \
+  -Wno-semicolon-before-method-body \
+  -Wunguarded-availability \
+  -fobjc-abi-version=2 \
+  -fobjc-legacy-dispatch \
+  -index-store-path /Users/ohanar/Library/Developer/Xcode/DerivedData/keybtest-ctfrorodbrkuvghkipbodnzsjipv/Index/DataStore \
+  -iquote /Users/ohanar/Library/Developer/Xcode/DerivedData/keybtest-ctfrorodbrkuvghkipbodnzsjipv/Build/Intermediates.noindex/keybtest.build/Debug-iphonesimulator/keybtest.build/keybtest-generated-files.hmap \
+  -I/Users/ohanar/Library/Developer/Xcode/DerivedData/keybtest-ctfrorodbrkuvghkipbodnzsjipv/Build/Intermediates.noindex/keybtest.build/Debug-iphonesimulator/keybtest.build/keybtest-own-target-headers.hmap \
+  -I/Users/ohanar/Library/Developer/Xcode/DerivedData/keybtest-ctfrorodbrkuvghkipbodnzsjipv/Build/Intermediates.noindex/keybtest.build/Debug-iphonesimulator/keybtest.build/keybtest-all-target-headers.hmap \
+  -iquote /Users/ohanar/Library/Developer/Xcode/DerivedData/keybtest-ctfrorodbrkuvghkipbodnzsjipv/Build/Intermediates.noindex/keybtest.build/Debug-iphonesimulator/keybtest.build/keybtest-project-headers.hmap \
+  -I/Users/ohanar/Library/Developer/Xcode/DerivedData/keybtest-ctfrorodbrkuvghkipbodnzsjipv/Build/Products/Debug-iphonesimulator/include \
+  -I/Users/ohanar/Library/Developer/Xcode/DerivedData/keybtest-ctfrorodbrkuvghkipbodnzsjipv/Build/Intermediates.noindex/keybtest.build/Debug-iphonesimulator/keybtest.build/DerivedSources-normal/x86_64 \
+  -I/Users/ohanar/Library/Developer/Xcode/DerivedData/keybtest-ctfrorodbrkuvghkipbodnzsjipv/Build/Intermediates.noindex/keybtest.build/Debug-iphonesimulator/keybtest.build/DerivedSources/x86_64 \
+  -I/Users/ohanar/Library/Developer/Xcode/DerivedData/keybtest-ctfrorodbrkuvghkipbodnzsjipv/Build/Intermediates.noindex/keybtest.build/Debug-iphonesimulator/keybtest.build/DerivedSources \
+  -F/Users/ohanar/Library/Developer/Xcode/DerivedData/keybtest-ctfrorodbrkuvghkipbodnzsjipv/Build/Products/Debug-iphonesimulator \
+  -MMD \
+  -MT dependencies \
+  -MF /Users/ohanar/Library/Developer/Xcode/DerivedData/keybtest-ctfrorodbrkuvghkipbodnzsjipv/Build/Intermediates.noindex/keybtest.build/Debug-iphonesimulator/keybtest.build/Objects-normal/x86_64/main.d \
+  --serialize-diagnostics /Users/ohanar/Library/Developer/Xcode/DerivedData/keybtest-ctfrorodbrkuvghkipbodnzsjipv/Build/Intermediates.noindex/keybtest.build/Debug-iphonesimulator/keybtest.build/Objects-normal/x86_64/main.dia \
+  -c /Users/ohanar/Desktop/keyblib/keybtest/keybtest/main.m \
+  -o /Users/ohanar/Library/Developer/Xcode/DerivedData/keybtest-ctfrorodbrkuvghkipbodnzsjipv/Build/Intermediates.noindex/keybtest.build/Debug-iphonesimulator/keybtest.build/Objects-normal/x86_64/main.o

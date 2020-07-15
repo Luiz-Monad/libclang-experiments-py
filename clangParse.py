@@ -1,5 +1,5 @@
 import sys, pprint
-from libclang.cindex import Index, SourceLocation, Cursor, File, CursorKind, TypeKind, Config, LibclangError
+from libclang.cindex import TranslationUnit, Index, SourceLocation, Cursor, File, CursorKind, TypeKind, Config, LibclangError
 
 pp = pprint.PrettyPrinter(indent=4)
 
@@ -25,11 +25,11 @@ def getQuickFix(diagnostic):
     return None
 
   res = dict({ 
-    'buf' :  filename,
-    'line' : diagnostic.location.line,
-    'col' : diagnostic.location.column,
-    'text' : diagnostic.spelling,
-    'type' : type
+    'buf':  filename,
+    'line': diagnostic.location.line,
+    'col': diagnostic.location.column,
+    'text': diagnostic.spelling,
+    'type': type
   })
   return res
 
@@ -106,18 +106,29 @@ def init():
     print "Error: " + str(e)
 
 def main():
+    #sysroot = '/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk',
+    sysroot = '/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator.sdk'
+    #arch = 'arm64'
+    arch = 'x86_64'
+    opt = TranslationUnit.PARSE_KEEPGOING
+    cargs = [
+      #'-v',
+      '-x', 'objective-c',
+      '-arch', arch,
+      '-fmodules', 
+      '-gmodules',
+      '-sdk', 'iphonesimulator',
+      '-miphoneos-version-min=9.3',
+      '-isysroot', sysroot,
+    ]
     init()
     index = Index.create()
-    tu = index.parse(sys.argv[1], args=[
-      '-x', 'objective-c',
-      '-arch', 'arm64',
-      '-fmodules',
-      '-miphoneos-version-min=9.3',
-      '-isysroot', '/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk',
-    ])
-    pp.pprint(sys.argv[1])
-    #pp.pprint(getQuickFixList(tu))
-    pp.pprint(walk(tu, getReferences))
+    files = ['pre.h'] + sys.argv[1:]
+    for f in files:
+      tu = index.parse(f, args = cargs, options = opt)
+      pp.pprint(f)
+      pp.pprint(getQuickFixList(tu))
+      pp.pprint(walk(tu, getReferences))    
 
 if __name__ == '__main__':
     main()

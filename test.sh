@@ -1,0 +1,3 @@
+#! /bin/sh
+clang++ -cc1 -ast-dump -v -x objective-c ./pre.h ../protocols/UIEditable.h ../protocols/UITable.h -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator.sdk -I /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator.sdk/usr/include > o.txt
+python clangParse.py ../protocols/UITable.h > o.txt
